@@ -1,0 +1,69 @@
+{
+    "type": "Ext.app.ViewModel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userAlias": "tasks",
+        "designer|userClassName": "TasksViewModel"
+    },
+    "designerId": "a5fc9637-ffb1-40d1-9d30-8126142ce9aa",
+    "cn": [
+        {
+            "type": "Ext.data.Store",
+            "reference": {
+                "name": "stores",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "autoLoad": true,
+                "autoSync": true,
+                "model": "Task",
+                "name": "tasks"
+            },
+            "name": "tasks",
+            "designerId": "763f2446-218f-4c39-b21c-ec0492fd5dec",
+            "cn": [
+                {
+                    "type": "Ext.data.proxy.Direct",
+                    "reference": {
+                        "name": "proxy",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "api": [
+                            "{",
+                            "create:  'Server.SA.Task.create',",
+                            "read:    'Server.SA.Task.read',",
+                            "update:  'Server.SA.Task.update',",
+                            "destroy: 'Server.SA.Task.destroy'",
+                            "}"
+                        ]
+                    },
+                    "name": "MyDirectProxy",
+                    "designerId": "3783505a-19c9-4ce8-a876-900979d9b900",
+                    "cn": [
+                        {
+                            "type": "Ext.data.reader.Json",
+                            "reference": {
+                                "name": "reader",
+                                "type": "object"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "messageProperty": "message",
+                                "rootProperty": "data"
+                            },
+                            "name": "MyJsonReader",
+                            "designerId": "2f2d1043-fab0-48ce-9f6a-bccf05d9f35b"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,11 @@
+Date: 2016/10/26
+
+1. Database changes
+   - Create a new schema (Demo)
+   - Create "user" table
+   - Insert data into "user" table
+   - Select data to confirm data is ready to use.
+
+2. Application changes
+   - Fork the application using mlarismendi account from GitHub
+   

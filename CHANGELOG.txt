@@ -1,10 +1,24 @@
 Date: 2016/10/26
 
 1. Database changes
-   - Create a new schema (Demo)
+   - Create a new schema (Demo) and start using it
+     use Demo;
+
    - Create "user" table
+     CREATE TABLE Demo.user (
+        id                       int(11) unsigned    NOT NULL    AUTO_INCREMENT,
+        firstname                varchar(200)        NOT NULL,
+        lastname                 varchar(200)        NOT NULL,
+        PRIMARY KEY (id)
+     ) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8;
+
    - Insert data into "user" table
+     insert into Demo.user (firstname, lastname) values 
+     ('Mario','Arismendi'),('Enrique','Mena'),('Rodrigo','Pavez');
+
    - Select data to confirm data is ready to use.
+     select * from Demo.user;
+
 
 2. Application changes
    - Fork the application using mlarismendi account from GitHub

@@ -21,5 +21,6 @@ Date: 2016/10/26
 
 
 2. Application changes
-   - Fork the application using mlarismendi account from GitHub
+   - Fork the application using mlarismendi account from GitHub -> DONE
+   - Setup and run the application -> DONE
    

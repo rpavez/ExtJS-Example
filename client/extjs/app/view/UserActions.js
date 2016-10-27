@@ -31,10 +31,6 @@ Ext.define('Demo.view.UserActions',{
         {
             fieldLabel: 'Last nanme',
             name: 'lastname'
-        },
-        {
-            fieldLabel: 'Email',
-            name: 'email'
         }
     ],
     tbar: [

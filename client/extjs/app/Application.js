@@ -15,6 +15,7 @@ Ext.define('Demo.Application', {
     views: [
         'MethodCall',
         'FormActions',
+        'UserActions',
         'GridActions',
         'FormUpload',
         'TreeActions',

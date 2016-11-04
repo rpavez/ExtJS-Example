@@ -16,6 +16,7 @@ Ext.define('Demo.Application', {
         'MethodCall',
         'FormActions',
         'UserActions',
+		'EmployeesActions',
         'GridActions',
         'FormUpload',
         'TreeActions',
@@ -37,7 +38,6 @@ Ext.define('Demo.Application', {
     ],
 
     launch: function(){
-
         var ns = Server.API;
 
         /*
@@ -55,7 +55,7 @@ Ext.define('Demo.Application', {
                 Ext.direct.Manager.addProvider(ns);
 
                 var viewport = Ext.create('Demo.view.Viewport');
-
+				
                 //Let's check if we are logged in
 
                 Server.Auth.Login.checkLogin({},
@@ -70,9 +70,7 @@ Ext.define('Demo.Application', {
                         }
                     }
                 );
-
             }
         }
-
     }
 });

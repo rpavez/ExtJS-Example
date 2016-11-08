@@ -23,6 +23,37 @@ var favicon = require('serve-favicon'),
     multer = require('multer'),
     errorHandler = require('errorhandler');
 
+var Sequelize = require('sequelize');
+var sequelize = new Sequelize('Demo', 'root', '***********', {
+	host: 'localhost',
+	dialect: 'mysql',
+	pool: {
+		max: 5,
+		min: 0,
+		idle: 10000
+	}
+});
+
+var User = sequelize.define('employee', {
+  firstName: {
+    type: Sequelize.STRING,
+    field: 'firstname' // Will result in an attribute that is firstName when user facing but first_name in the database
+  },
+  lastName: {
+    type: Sequelize.STRING,
+    field: 'lastname' // Will result in an attribute that is firstName when user facing but first_name in the database
+  }
+},{
+	createdAt: false,
+	updatedAt: false
+});
+
+/*
+User.findOne().then(function (user) {
+    console.log(user.get('firstName'));
+});
+*/
+
 var app = express();
 
 //Configure
